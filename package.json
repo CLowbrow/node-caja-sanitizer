@@ -1,0 +1,20 @@
+{
+  "name": "html-sanitizer",
+  "version": "0.0.0",
+  "description": "Sanitizer for html/css",
+  "main": "sanitizer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/CLowbrow/node-caja-sanitizer"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "sanitizer"
+  ],
+  "author": "Alex Zelenskiy",
+  "license": "BSD"
+}
