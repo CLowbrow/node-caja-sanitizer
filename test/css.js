@@ -2,7 +2,7 @@ var test = require('tap').test;
 var sanitizer = require('../sanitizer');
 var url = require('url');
 
-function urlX(url) { if(/^https?:\/\//.test(url)) { return url }}
+function urlX(u) { return u }
 function idX(id) { return id }
 function sanitize (string) {
   return sanitizer.sanitize(string, urlX, idX);
@@ -25,6 +25,18 @@ test('links are ok', function (t) {
   var string = '<a href="http://www.google.com">google</a>';
   var result = sanitize(string);
   t.equal(result, string);
+  t.end();
+});
+test('onclick removed', function (t) {
+  var string = '<a onclick="myFunction()">google</a>';
+  var result = sanitize(string);
+  t.equal(result, '<a>google</a>');
+  t.end();
+});
+test('href javascript removed', function (t) {
+  var string = '<a href="Javascript: doStuff();">google</a>';
+  var result = sanitize(string);
+  t.equal(result, '<a>google</a>');
   t.end();
 });
 test('inline styles are ok', function (t) {
