@@ -1,4 +1,4 @@
-var window = {};
+window = {};
 
 /* Copyright Google Inc.
  * Licensed under the Apache Licence Version 2.0
@@ -4557,6 +4557,14 @@ var html = (function(html4) {
   return html;
 })(html4);
 
-var html_sanitize = html['sanitize'];
-exports.sanitize = html_sanitize;
+
+exports.escapeAttrib = html.escapeAttrib;
+exports.makeHtmlSanitizer = html.makeHtmlSanitizer;
+exports.makeSaxParser = html.makeSaxParser;
+exports.makeTagPolicy = html.makeTagPolicy;
+exports.normalizeRCData = html.normalizeRCData;
+exports.sanitize = html.sanitize;
+exports.sanitizeAttribs = html.sanitizeAttribs;
+exports.sanitizeWithPolicy = html.sanitizeWithPolicy;
+exports.unescapeEntities = html.unescapeEntities;
 
