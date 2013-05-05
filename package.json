@@ -1,10 +1,10 @@
 {
-  "name": "html-sanitizer",
+  "name": "html-css-sanitizer",
   "version": "0.0.0",
-  "description": "Sanitizer for html/css",
+  "description": "Node wrapper for caja sanitizer for html/css",
   "main": "sanitizer.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tap ./test"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
     "sanitizer"
   ],
   "author": "Alex Zelenskiy",
-  "license": "BSD"
+  "license": "BSD",
+  "devDependencies": {
+    "tap": "~0.4.2"
+  }
 }
