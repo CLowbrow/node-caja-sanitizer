@@ -1,6 +1,6 @@
 {
   "name": "html-css-sanitizer",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Node wrapper for caja sanitizer for html/css",
   "main": "sanitizer.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "sanitizer"
   ],
   "author": "Alex Zelenskiy",
-  "license": "BSD",
+  "license": "Apache 2.0",
   "devDependencies": {
     "tap": "~0.4.2"
   }
