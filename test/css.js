@@ -8,6 +8,10 @@ function sanitize (string) {
   return sanitizer.sanitize(string, urlX, idX);
 }
 
+function smartSanitize (string) {
+  return sanitizer.smartSanitize(string, urlX, idX);
+}
+
 test('make sure I can include sanitizer', function (t) {
   var string = 'a string goes here';
   var result = sanitize(string);
@@ -45,3 +49,9 @@ test('inline styles are ok', function (t) {
   t.equal(result, string);
   t.end();
 });
+test('can sanitize self-closing tags', function (t) {
+  var string = '<p><a name="foo"/> This is the foo section.</p><p><a name="bar"/> This is the bar section.</p>';
+  var result = smartSanitize(string);
+  t.equal(result, '<p><a name="foo"></a> This is the foo section.</p><p><a name="bar"></a> This is the bar section.</p>');
+  t.end();
+})

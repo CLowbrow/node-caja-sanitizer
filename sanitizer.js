@@ -4909,6 +4909,10 @@ exports.makeSaxParser = html.makeSaxParser;
 exports.makeTagPolicy = html.makeTagPolicy;
 exports.normalizeRCData = html.normalizeRCData;
 exports.sanitize = html.sanitize;
+exports.smartSanitize = function (string, urlX, idX) {
+  string = string.replace(/<([a-zA-Z]+)([^>]*)\/>/g, '<$1$2></$1>');
+  return html.sanitize(string, urlX, idX);
+}
 exports.sanitizeAttribs = html.sanitizeAttribs;
 exports.sanitizeWithPolicy = html.sanitizeWithPolicy;
 exports.unescapeEntities = html.unescapeEntities;
