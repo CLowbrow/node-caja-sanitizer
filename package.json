@@ -1,6 +1,6 @@
 {
   "name": "html-css-sanitizer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Node wrapper for caja sanitizer for html/css",
   "main": "sanitizer.js",
   "scripts": {
