@@ -1,4 +1,6 @@
-var window = {};
+/* File changed here and at the bottom to make it work nicely with node */
+
+var window = {}; 
 
 /* Copyright Google Inc.
  * Licensed under the Apache Licence Version 2.0
